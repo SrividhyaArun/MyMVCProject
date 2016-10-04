@@ -7,3 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
+
+public partial class ProductsData
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public string Picture { get; set; }
+    public double Price { get; set; }
+    public string Description { get; set; }
+}
+
+public partial class UserDetail
+{
+    public int ID { get; set; }
+    public string Email { get; set; }
+    public string Address { get; set; }
+}

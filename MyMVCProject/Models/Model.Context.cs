@@ -7,25 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyMVCProject.Models
+using System;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+
+public partial class ShopDBEntities : DbContext
 {
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Infrastructure;
-    
-    public partial class ShopDBEntities : DbContext
+    public ShopDBEntities()
+        : base("name=ShopDBEntities")
     {
-        public ShopDBEntities()
-            : base("name=ShopDBEntities")
-        {
-        }
-    
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
-        }
-    
-        public virtual DbSet<ProductsData> ProductsDatas { get; set; }
-        public virtual DbSet<UserDetail> UserDetails { get; set; }
     }
+
+    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    {
+        throw new UnintentionalCodeFirstException();
+    }
+
+    public virtual DbSet<ProductsData> ProductsDatas { get; set; }
+    public virtual DbSet<UserDetail> UserDetails { get; set; }
 }
